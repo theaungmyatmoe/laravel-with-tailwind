@@ -1,10 +1,7 @@
 {
     "version": 2,
-    "regions": ["sin1"],
     "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
-        }
+        "api/index.php": { "runtime": "vercel-php@0.5.3" }
     },
     "routes": [
         {
@@ -22,29 +19,19 @@
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
-        },
-        {
-            "src": "/assets/(.*)",
-            "dest": "/assets/$1"
         }
     ],
-    "outputDirectory": "public/build",
     "env": {
-        "APP_NAME": "Laravel with tailwind",
+        "APP_NAME": "Tempestas",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
 
-        "APP_KEY": "base64:+naakOVSDszyMPC+wG+lmtfdHGNoSttFwh0NMYW466U=",
-        "APP_URL": "https://laravel-with-tailwind.vercel.app",
-        "ASSET_URL": "https://laravel-with-tailwind.vercel.app",
-        "MYSQL_ATTR_SSL_CA": "/etc/pki/tls/certs/ca-bundle.crt",
-        "VERCEL_DEMO_MODE": "true",
-        "MEDIA_DISK": "s3",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
