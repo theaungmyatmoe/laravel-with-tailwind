@@ -1,6 +1,8 @@
 {
     "version": 2,
-    "regions": ["sin1"],
+    "regions": [
+        "sin1"
+    ],
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.6.0"
@@ -8,12 +10,8 @@
     },
     "routes": [
         {
-            "src": "/build/(.*)",
-            "dest": "/public/build/"
-        },
-        {
-            "src": "/resources/(.*)",
-            "dest": "/public/resources/"
+            "src": "/build(.)",
+            "dest": "/public/assets/"
         },
         {
             "src": "/favicon/(.*)",
@@ -22,14 +20,13 @@
         {
             "src": "/(.*)",
             "dest": "/api/index.php"
-        },
+        }
     ],
     "outputDirectory": "public/build",
     "env": {
         "APP_NAME": "Laravel with tailwind",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-
         "APP_KEY": "base64:+naakOVSDszyMPC+wG+lmtfdHGNoSttFwh0NMYW466U=",
         "APP_URL": "https://laravel-with-tailwind.vercel.app",
         "ASSET_URL": "https://laravel-with-tailwind.vercel.app",
