@@ -22,7 +22,7 @@
             "dest": "/api/index.php"
         }
     ],
-    "outputDirectory": "public/build",
+    "outputDirectory": "public",
     "env": {
         "APP_NAME": "Laravel with tailwind",
         "APP_ENV": "production",
